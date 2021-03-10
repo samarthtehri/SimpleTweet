@@ -22,10 +22,11 @@ import okhttp3.Headers;
 
 public class ComposeActivity extends AppCompatActivity {
 
-    public static final int MAX_TWEET_LENGTH = 140;
+    public static final int MAX_TWEET_LENGTH = 280;
     public static final String TAG = "ComposeActivity";
 
     EditText etCompose;
+    EditText etSimple;
     Button btnTweet;
 
     TwitterClient client;
@@ -39,6 +40,11 @@ public class ComposeActivity extends AppCompatActivity {
 
         etCompose = findViewById(R.id.etCompose);
         btnTweet= findViewById(R.id.btnTweet);
+
+        EditText etSimple = (EditText) findViewById(R.id.etCompose);
+        String strValue = etSimple.getText().toString();
+        //work in progress
+
 
         //set click listener on button
         btnTweet.setOnClickListener(new View.OnClickListener() {
